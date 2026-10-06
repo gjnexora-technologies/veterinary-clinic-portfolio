@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace this example-domain sitemap URL with the clinic's published domain before submitting to search engines. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://riverdale-veterinary.example/</loc></url>
+  <url><loc>https://riverdale-veterinary.example/about</loc></url>
+  <url><loc>https://riverdale-veterinary.example/services</loc></url>
+  <url><loc>https://riverdale-veterinary.example/veterinarians</loc></url>
+  <url><loc>https://riverdale-veterinary.example/pet-care</loc></url>
+  <url><loc>https://riverdale-veterinary.example/gallery</loc></url>
+  <url><loc>https://riverdale-veterinary.example/health-tips</loc></url>
+  <url><loc>https://riverdale-veterinary.example/contact</loc></url>
+</urlset>
