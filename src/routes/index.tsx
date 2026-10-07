@@ -40,16 +40,16 @@ function Index() {
   return (
     <>
       <section className="container-page pt-5 md:pt-8">
-        <div className="relative isolate grid min-h-[590px] overflow-hidden rounded-[2rem] bg-primary md:min-h-[680px] md:grid-cols-[0.9fr_1.1fr]">
+        <div className="relative isolate grid min-h-[500px] overflow-hidden rounded-[1.5rem] bg-primary sm:min-h-[540px] sm:rounded-[2rem] md:min-h-[600px] md:grid-cols-[0.9fr_1.1fr] lg:min-h-[680px]">
           <div className="absolute inset-0 -z-10 md:inset-y-0 md:left-[34%] md:right-0">
             <img src={images.heroVet} alt="Veterinarian with a happy golden retriever and tabby cat at the clinic" width={1920} height={1280} fetchPriority="high" className="size-full object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/70 to-primary/5 md:from-primary md:via-primary/40 md:to-transparent" />
           </div>
-          <div className="relative z-10 flex flex-col justify-center p-7 text-primary-foreground md:p-12 lg:p-16">
-            <span className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-4 py-2 text-xs font-semibold backdrop-blur">
+          <div className="relative z-10 flex flex-col justify-center p-6 text-primary-foreground sm:p-8 md:p-12 lg:p-16">
+            <span className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-3 py-2 text-[11px] font-semibold backdrop-blur sm:px-4 sm:text-xs">
               <PawPrint className="size-4" /> CARE FOR EVERY COMPANION
             </span>
-            <h1 className="max-w-xl text-balance font-display text-5xl font-semibold leading-[1.04] md:text-6xl">
+            <h1 className="max-w-xl text-balance font-display text-[clamp(2.25rem,8vw,3.75rem)] font-semibold leading-[1.04]">
               Exceptional care <span className="text-sun">for every paw.</span>
             </h1>
             <p className="mt-5 max-w-lg text-pretty text-base leading-relaxed text-primary-foreground/90 md:text-lg">

@@ -28,7 +28,9 @@ export function SectionHeading({
           {eyebrow}
         </span>
       ) : null}
-      <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight md:text-4xl">{title}</h2>
+      <h2 className="mt-4 text-balance text-[clamp(1.75rem,5vw,2.5rem)] font-semibold leading-tight">
+        {title}
+      </h2>
       {text ? <p className="mt-4 text-pretty text-muted-foreground md:text-lg">{text}</p> : null}
     </Reveal>
   );
@@ -49,7 +51,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "py-16 md:py-24",
+        "py-12 sm:py-16 lg:py-24",
         tone === "soft" && "gradient-soft",
         tone === "cream" && "bg-cream",
         className,

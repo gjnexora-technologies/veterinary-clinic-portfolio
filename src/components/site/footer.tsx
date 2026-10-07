@@ -5,8 +5,8 @@ import { clinic, navLinks } from "@/lib/clinic";
 export function SiteFooter() {
   return (
     <footer className="mt-24 border-t border-border bg-card/70">
-      <div className="container-page grid gap-10 py-14 md:grid-cols-4">
-        <div className="md:col-span-2">
+      <div className="container-page grid gap-8 py-10 sm:grid-cols-2 sm:gap-10 sm:py-14 lg:grid-cols-4">
+        <div className="sm:col-span-2 lg:col-span-2">
           <div className="flex items-center gap-2.5">
             <span className="grid size-10 place-items-center rounded-2xl gradient-hero text-primary-foreground">
               <PawPrint className="size-5" aria-hidden="true" />
@@ -56,7 +56,9 @@ export function SiteFooter() {
             </li>
             <li className="flex gap-2">
               <Mail className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
-              <a href={`mailto:${clinic.email}`}>{clinic.email}</a>
+              <a href={`mailto:${clinic.email}`} className="min-w-0 break-all">
+                {clinic.email}
+              </a>
             </li>
           </ul>
           <ul className="mt-4 space-y-1 text-xs text-muted-foreground">

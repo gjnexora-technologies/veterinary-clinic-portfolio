@@ -36,16 +36,22 @@ export function SiteHeader() {
       >
         Skip to content
       </a>
-      <div className="container-page flex h-18 items-center justify-between gap-4 py-3">
-        <Link to="/" className="flex items-center gap-2.5" aria-label={`${clinic.name} home`}>
+      <div className="container-page flex h-16 items-center justify-between gap-2 py-2 sm:h-18 sm:gap-4 sm:py-3">
+        <Link
+          to="/"
+          className="flex min-w-0 items-center gap-2 sm:gap-2.5"
+          aria-label={`${clinic.name} home`}
+        >
           <span className="grid size-10 place-items-center rounded-2xl gradient-hero text-primary-foreground shadow-soft">
             <PawPrint className="size-5" aria-hidden="true" />
           </span>
           <span className="leading-tight">
-            <span className="block font-display text-base font-semibold tracking-tight">
+            <span className="block truncate font-display text-sm font-semibold tracking-tight sm:text-base">
               {clinic.name}
             </span>
-            <span className="block text-xs text-muted-foreground">{clinic.tagline}</span>
+            <span className="block truncate text-[11px] text-muted-foreground sm:text-xs">
+              {clinic.tagline}
+            </span>
           </span>
         </Link>
 
@@ -85,7 +91,7 @@ export function SiteHeader() {
       {/* Mobile slide-out */}
       <div
         className={cn(
-          "fixed inset-0 top-0 z-40 xl:hidden",
+          "fixed inset-0 top-0 z-40 overflow-hidden xl:hidden",
           open ? "pointer-events-auto" : "pointer-events-none",
         )}
         aria-hidden={!open}

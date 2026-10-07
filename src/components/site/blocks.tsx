@@ -66,20 +66,20 @@ export function PageIntro({
   alt: string;
 }) {
   return (
-    <section className="container-page pt-8 md:pt-12">
-      <div className="relative isolate grid min-h-[330px] overflow-hidden rounded-[2rem] bg-primary md:min-h-[420px] md:grid-cols-[1fr_0.95fr]">
+    <section className="container-page pt-6 sm:pt-8 md:pt-12">
+      <div className="relative isolate grid min-h-[300px] overflow-hidden rounded-[1.5rem] bg-primary sm:min-h-[340px] sm:rounded-[2rem] md:min-h-[420px] md:grid-cols-[1fr_0.95fr]">
         <div className="absolute inset-0 -z-10 md:inset-y-0 md:left-[40%] md:right-0">
           <img src={image} alt={alt} className="size-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/70 to-transparent md:from-primary md:via-primary/30" />
         </div>
-        <div className="flex flex-col justify-center p-7 text-primary-foreground md:p-12 lg:p-16">
+        <div className="flex flex-col justify-center p-6 text-primary-foreground sm:p-8 md:p-12 lg:p-16">
           <span className="text-xs font-semibold uppercase tracking-wider text-primary-foreground/80">
             {eyebrow}
           </span>
-          <h1 className="mt-4 max-w-xl text-balance font-display text-4xl font-semibold leading-tight md:text-5xl">
+          <h1 className="mt-4 max-w-xl text-balance font-display text-[clamp(2rem,7vw,3rem)] font-semibold leading-tight">
             {title}
           </h1>
-          <p className="mt-4 max-w-xl text-pretty text-sm leading-relaxed text-primary-foreground/85 md:text-base">
+          <p className="mt-3 max-w-xl text-pretty text-sm leading-relaxed text-primary-foreground/85 sm:mt-4 md:text-base">
             {text}
           </p>
         </div>
@@ -92,17 +92,17 @@ export function PageIntro({
 export function QuickServiceBar() {
   return (
     <div className="container-page -mt-8 relative z-10">
-      <div className="grid overflow-hidden rounded-3xl border border-border/80 bg-card shadow-soft sm:grid-cols-2 lg:grid-cols-5">
+      <div className="grid grid-cols-2 overflow-hidden rounded-2xl border border-border/80 bg-card shadow-soft sm:rounded-3xl lg:grid-cols-5">
         {quickServices.map((service, index) => (
           <Link
             key={service.title}
             to="/services"
-            className={`group flex items-center gap-3 p-4 transition-colors hover:bg-secondary/70 ${index < quickServices.length - 1 ? "lg:border-r lg:border-border" : ""}`}
+            className={`group flex min-w-0 items-center gap-2 p-3 transition-colors hover:bg-secondary/70 sm:gap-3 sm:p-4 ${index === quickServices.length - 1 ? "col-span-2 lg:col-span-1" : ""} ${index < quickServices.length - 1 ? "lg:border-r lg:border-border" : ""}`}
           >
-            <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-secondary text-primary transition-transform group-hover:-rotate-6">
+            <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-secondary text-primary transition-transform group-hover:-rotate-6 sm:size-11 sm:rounded-2xl">
               <Icon name={service.icon} className="size-5" />
             </span>
-            <span>
+            <span className="min-w-0">
               <span className="block font-display text-sm font-semibold">{service.title}</span>
               <span className="mt-0.5 block text-xs leading-relaxed text-muted-foreground">
                 {service.text}
@@ -893,13 +893,13 @@ export function ServicesImageStrip() {
 
 export function HeroActionLinks() {
   return (
-    <div className="flex flex-wrap gap-3">
-      <Button asChild variant="hero" size="lg">
+    <div className="flex flex-col gap-2 min-[400px]:flex-row min-[400px]:flex-wrap min-[400px]:gap-3">
+      <Button asChild variant="hero" size="lg" className="w-full min-[400px]:w-auto">
         <Link to="/contact">
           Book an Appointment <ArrowRight />
         </Link>
       </Button>
-      <Button asChild variant="onDark" size="lg">
+      <Button asChild variant="onDark" size="lg" className="w-full min-[400px]:w-auto">
         <Link to="/services">Explore Our Services</Link>
       </Button>
     </div>
